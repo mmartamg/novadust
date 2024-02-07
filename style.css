@@ -1,0 +1,268 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: filter 0.2s ease;
+}
+
+:root {
+    --dark-blue: #1d2833;
+    --soft-dark-blue: #2c3a4a;
+    --light-blue: #303f51;
+    --washed-blue: #74859a;
+    --ocean-blue: #2c4f64;
+    --bright-blue: #5fcbc3;
+    --percy-blue: #85dda2;
+    --bright-green: #b9e678;
+    --soft-yellow: #ffd580;
+    --bright-orange: #ffa161;
+    --bright-red: #ff695d;
+    --bright-purple: #d689e3;
+    --soft-white: #eeead1;
+    --the-white: #f7f5e9;
+    --basic-gray: #cfd1d1;
+    --soft-orlow: #ffe3ba;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: var(--the-white);
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+b {
+    color: var(--bright-green);
+}
+
+a {
+    color: var(--bright-blue);
+    font-weight: 300;
+}
+
+i {
+    color: var(--soft-yellow);
+    font-weight: 500;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*BACKGROUND*/
+
+body::before,
+body::after {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    content: '';
+    mix-blend-mode: overlay;         
+}
+body::before {
+    background: #fff;
+    filter: url(#grain);
+    opacity: 50%;
+}
+
+.fondo-scroll {
+    background-image: url('../img/fondocompletov1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh; 
+}
+
+.estrellas-fijas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('../img/estrellas.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+    z-index: -1; 
+}
+
+.blur-and-darken {
+    filter: blur(1px) brightness(95%);
+}
+
+/*LOGO CENTRAL*/
+
+#centrallogo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%; 
+    z-index: 3;
+
+}
+#centrallogo img:hover {
+    filter: contrast(1.2);
+    transition: filter 0.3s ease; 
+}
+
+
+/*TITLE*/
+
+.title {
+    margin: 110px;
+}
+
+
+/*DOWNLOAD*/
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex:50%; 
+    padding: 20px;
+    position: relative;
+}
+
+.column img {
+    width: 87%;
+    height: auto;
+    position: relative;
+    margin: 5px;
+}
+
+.column img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+    filter: drop-shadow(0 0 0.9rem var(--bright-blue));
+}
+
+
+/*BUTTONS*/
+
+.button {
+    margin: 10px;
+    background: linear-gradient(to bottom right, var(--bright-red), var(--bright-orange));
+    border: 0;
+    border-radius: 12px;
+    color: var(--the-white);
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+}
+  
+.button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem var(--bright-red), .125rem .125rem 1rem var(--bright-orange);
+    transform: translateY(-5px); 
+}
+  
+.button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.2), -.100rem -.100rem 1rem var(--bright-red), .100rem .100rem 1rem var(--bright-orange);
+    transform: translateY(-5px); 
+}
+
+
+/*COLORS*/
+
+.colorssect {
+    margin: 100px;
+}
+
+.colores {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+}
+
+.fila {
+    display: flex;
+    gap: 10px; 
+}
+
+.box {
+    height: 60px; 
+    width: 60px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.box:hover {
+    transform: translateY(-9px); 
+}
+
+.color-tag {
+    display: none;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bright-orange);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--the-white);
+    white-space: nowrap;
+    z-index: 10; 
+}
+
+.box:hover .color-tag {
+    display: block;
+}
+
+
+/*ABOUT*/
+
+.about {
+    margin: auto;
+    margin-top: 150px;
+    width: 500px;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    margin-top: 70px;
+    flex-shrink: 0;
+    background-color: none;
+    padding: 37px;
+    font-weight: 200;
+}
+
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column; 
+    }
+    .about {
+        margin: auto;
+        width: 70%;
+    }
+}

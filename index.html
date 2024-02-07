@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Novadust</title>
+        <meta name="description" content="A a dark blue color theme and new outlook on technology">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../img/NOVADUSTICON.ico">
+    </head>
+
+    <body class="fondo-scroll" >
+
+        <div id="centrallogo">
+            <img src="../img/NOVADUSTLOGOV1SINFONDO.png" height="320em" />
+        </div>
+
+        <div class="title">
+            <h1>Inspired by the Stars</h1>
+        </div>
+
+        <section class="download">
+            <h2>Available on</h2>
+            <div class="row">
+                <div class="column" id="vscode">
+                    <h3>VSCode</h3>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=novadust.novadust">
+                        <img class="imagen-hover" src="../img/PANTALLAVSCODECIRC.png" height="300em" />
+                    </a>
+                    <br>
+                    <a class="button" href="https://marketplace.visualstudio.com/items?itemName=novadust.novadust">Download</a>
+                </div>
+                <div class="column" id="obsidian">
+                    <h3>Obsidian</h3>
+                    <a href="https://github.com/mmartamg/novadust-obsidian">
+                        <img class="imagen-hover" src="../img/PROMOOBSIDIANCIRC1.png" height="300em" />
+                    </a>
+                    <br>
+                    <a class="button" href="https://marketplace.visualstudio.com/items?itemName=novadust.novadust">Download</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="colorssect">
+            <h2>Main colors</h2>
+            <div class="colores">
+                <div class="fila">
+                    <div class="box" style="background-color: var(--bright-purple);"></div>
+                    <div class="box" style="background-color: var(--bright-red);"></div>
+                    <div class="box" style="background-color: var(--bright-orange);"></div>
+                    <div class="box" style="background-color: var(--soft-yellow);"></div>
+                </div>
+                <div class="fila">
+                    <div class="box" style="background-color: var(--bright-green);"></div>
+                    <div class="box" style="background-color: var(--percy-blue);"></div>
+                    <div class="box" style="background-color: var(--bright-blue);"></div>
+                    <div class="box" style="background-color: var(--ocean-blue);"></div>
+                </div>
+                <div class="fila">
+                    <div class="box" style="background-color: var(--soft-orlow);"></div>
+                    <div class="box" style="background-color: var(--soft-white);"></div>
+                    <div class="box" style="background-color: var(--the-white);"></div>
+                    <div class="box" style="background-color: var(--basic-gray);"></div>
+                </div>
+                <div class="fila">
+                    <div class="box" style="background-color: var(--dark-blue);"></div>
+                    <div class="box" style="background-color: var(--soft-dark-blue);"></div>
+                    <div class="box" style="background-color: var(--light-blue);;"></div>
+                    <div class="box" style="background-color: var(--washed-blue);"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>More than a color theme</h2>
+            <p><b>Novadust</b> is much more than a color theme.</p>
+            <p>It represents a newfound enthusiasm for the future.  
+             It's about redefining how we interact with
+             technology, recognizing that it's more than a tool. 
+             It's being excited about tecnology again, rediscovering the <i>stories</i> it holds. </p>
+        </section>
+        
+        <svg style="height: 0;">
+            <filter id="grain">
+                <feTurbulence 
+                type='fractalNoise' 
+                baseFrequency='6.65' 
+                numOctaves='3' 
+                stitchTiles='stitch'/>
+            </filter>
+        </svg>
+
+        <div class="estrellas-fijas" id="estrellas"></div>
+
+        <footer class="footer">
+            <p>An original concept by <a href="https://github.com/mmartamg">marta.stl</a></p>
+        </footer>
+
+        <script src="script.js">
+        </script>
+
+    </body>
+</html>
